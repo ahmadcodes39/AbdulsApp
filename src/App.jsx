@@ -10,16 +10,18 @@ import Header from "./Components/Header";
 
 const App = () => {
   return (
-    <div className="px-11">
+    <>
       <Header />
-      <Routes>
-        <Route path="/" element={<DataPage />} />
-        <Route path="/model" element={<ModelPage />} />
-        <Route path="/attack" element={<AttackPage />} />
-        <Route path="/mitigate" element={<MitigatePage />} />
-        <Route path="/compare" element={<ComparePage />} />
-      </Routes>
-    </div>
+      <div className="px-11">
+        <Routes>
+          <Route path="/" element={<DataPage />} />
+          <Route path="/model" element={<ModelPage />} />
+          <Route path="/attack" element={<AttackPage />} />
+          <Route path="/mitigate" element={<MitigatePage />} />
+          <Route path="/compare" element={<ComparePage />} />
+        </Routes>
+      </div>
+    </>
   );
 };
 

@@ -2,30 +2,37 @@ import React, { useContext } from "react";
 import { AppContext } from "../UseContext/AppContext";
 
 const SelectOption = ({ data, type }) => {
-  const { dataset, setDataset, model, setModel } = useContext(AppContext);
+  const { dataset, setDataset, model, setModel, mitigation, setMitigation } =
+    useContext(AppContext);
 
   const handleChange = (event) => {
     if (type === "dataset") {
-      setDataset(event.target.value); // Update dataset
+      setDataset(event.target.value);
     } else if (type === "model") {
-      setModel(event.target.value); // Update model
+      setModel(event.target.value);
+    } else if (type === "mitigation") {
+      setMitigation(event.target.value);
     }
   };
-  console.log(dataset)
-  console.log(model)
 
   return (
     <div className="flex flex-col">
       {data.map((item, index) => (
-        <div key={index} className="px-7 py-4">
+        <div key={index} className="px-5 py-4">
           <h1 className="text-md font-bold">
             <input
               type="radio"
-              name={type} // Ensure different radio groups for dataset and model
+              name={type}
               id={`${type}-${index}`}
-              value={item.title} // Store the selected value
-              checked={type === "dataset" ? dataset === item.title : model === item.title} // Maintain selection
-              onChange={handleChange} // Update the correct state
+              value={item.title}
+              checked={
+                type === "dataset"
+                  ? dataset === item.title
+                  : type === "model"
+                  ? model === item.title
+                  : mitigation === item.title
+              }
+              onChange={handleChange}
             />{" "}
             {item.title}
           </h1>

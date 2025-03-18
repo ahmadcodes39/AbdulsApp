@@ -3,28 +3,28 @@ import MainHeading from '../Components/MainHeading'
 import SelectOption from '../Components/SelectOption'
 
 const data = [
-    {
-      title: "Data",
-      description: "Upload and configure your dataset."
-    },
-    {
-      title: "Model",
-      description: "Choose and train your AI model."
-    },
-    {
-      title: "Attack",
-      description: "Simulate adversarial attacks on the model."
-    },
-    {
-      title: "Mitigate",
-      description: "Apply defense strategies to improve robustness."
-    },
-    {
-      title: "Compare",
-      description: "Evaluate results and compare different approaches."
-    }
-  ];
-  
+  {
+    title: "Heart Disease Dataset",
+    description: "Predicts the likelihood of heart disease based on medical parameters.",
+  },
+  {
+    title: "Loan Approval Dataset",
+    description: "Predicts whether a loan application will be approved based on financial history.",
+  },
+  {
+    title: "Fraud Detection Dataset",
+    description: "Predicts fraudulent transactions using customer behavior patterns.",
+  },
+  {
+    title: "Spam Email Dataset",
+    description: "Predicts whether an email is spam or not based on text analysis.",
+  },
+  {
+    title: "House Price Prediction Dataset",
+    description: "Predicts house prices based on features like location, size, and amenities.",
+  },
+];
+
 const DataPage = () => {
   return (
     <div>

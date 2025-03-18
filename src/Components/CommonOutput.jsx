@@ -1,6 +1,6 @@
 import React from "react";
 
-const CommonOutput = ({ srNo, title, data,description }) => {
+const CommonOutput = ({ srNo, title, data, description }) => {
   return (
     <div className="flex flex-col gap-3 mt-16 ">
       <h1 className="text-black text-xl font-bold">
@@ -27,10 +27,12 @@ const CommonOutput = ({ srNo, title, data,description }) => {
           <strong>Attack Accuracy: </strong>
           {data[4]}
         </p>
-        <p>
-          <strong>Mitigation: </strong>
-          {data[5]}
-        </p>
+        {data[5] != null && (
+          <p>
+            <strong>Mitigation: </strong>
+            {data[5]}
+          </p>
+        )}
       </section>
       <p className="mt-10 px-7">{description}</p>
     </div>

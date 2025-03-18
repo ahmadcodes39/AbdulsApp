@@ -4,13 +4,13 @@ import { AppContext } from "../UseContext/AppContext";
 import ResultTable from "../Components/ResultTable";
 import CommonOutput from "../Components/CommonOutput";
 const ComparePage = () => {
-  const { dataset, model } = useContext(AppContext);
+  const { dataset, model , mitigation} = useContext(AppContext);
   const headers = ["k", "Model Accuracy", "attack accuracy"];
   const dataContent = [
     [1, 2, 3],
     [4, 5, 6],
   ];
-  const data = [dataset, model, 0.64, "Membership", 0.59];
+  const data = [dataset, model, 0.64, "Membership", 0.59,mitigation];
   return (
     <div>
       <CommonOutput
